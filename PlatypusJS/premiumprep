@@ -1,0 +1,61 @@
+var integer = 4;
+var float = 4.7;
+var max = +Infinity;
+
+// some operations with numbers
+var sum = 4 + 5; // adding two numbers
+var difference = 9 - 4; // subtracting two numbers
+var product = 4 * 5; // multiplying two numbers
+var quotient = 20 / 4; // dividing two numbers
+
+var remainder = 9 % 2;
+console.log(remainder);
+
+anyOddNumber % 2 will always evaluate to 1
+anyEvenNumber % 2 will always evaluate to 0
+
+function returnAnElement(array, index) {
+  return array[index];
+}
+
+var scores = [98, 85, 91, 78, 82];
+var position = 3;
+var positionElement = returnAnElement(scores, position);
+console.log('positionElement:', positionElement);
+
+console.log('type of an array:', typeof [3, 4, 5]);
+console.log('type of an object:', typeof {a: 1});
+----logs object for both bc arrays are lists like objects must use array.IsArray
+
+// let us write a function that returns the type of argument the function has been called with (assume the argument will be scalar - not a collection)
+function getType(param) {
+  return typeof param;
+}
+
+var numType = getType(56);
+console.log('numType:', numType);
+
+var stringType = getType('serial number');
+console.log('stringType:', stringType);
+
+var undefinedType = getType();
+console.log('undefinedType:', undefinedType); //think carefully about what is happening here
+
+// let us write a function that returns true if the argument is an Array, and returns false if it is not
+function determineIsAnArray(input) {
+  var isAnArray = Array.isArray(input);
+  return isAnArray;
+}
+
+var affirmative = determineIsAnArray([1, 2, 3]);
+console.log('affirmative:', affirmative);
+
+var negative = determineIsAnArray({a: 1});
+console.log('negative:', negative);
+
+function createAndReturnAnObject() {
+  // create an object
+  // return the created object
+ var obj = {};
+  return obj;
+}

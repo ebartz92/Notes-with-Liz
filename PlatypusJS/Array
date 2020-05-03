@@ -1,0 +1,82 @@
+// create a result variable,
+// assign it to a new array
+// return the result variable
+
+function createArray() {
+  var result = [];
+  return result;
+}
+
+
+var array = [1, 2, 3, 4];
+
+var secondElement = array[1];
+console.log('secondElement:', secondElement)
+
+// create a result variable,
+// assign it to an expression that accesses the element within array at the index
+// return the result variable
+function accessAnElement(array, index) {
+  var result = array[index];
+  return result;
+}
+
+function reassignAnElement(array, index, newValue) {
+  // reassign the value in the array, located at the index, to the newValue parameter
+  // return the input array
+  array[index] = newValue;
+  return array;
+}
+function getArrayLength(array) {
+  // create a length variable
+  // assign it to the length of the array
+  // return the length variable
+  var lengthOfInputArray = array.length;
+  return lengthOfInputArray;
+}
+// create a lastIndex variable
+// assign it to the last index in the array
+// create a lastElement variable
+// assign it to the last element in the string (make use of lastIndex)
+// return the lastElement variable
+function getLastElement(array) {
+  var lastIndex = array.length -1;
+  var lastElement = array[lastIndex];
+  return lastElement;
+}
+
+function applyPush(array, element) {
+  // add the element to the back of the array
+  // return the array
+  array.push(element);
+  return array;
+}
+function applyPop(array) {
+  // create a popped variable
+  // assign it to an expression removing the last element from the array
+  // return the popped variable
+  var popped = array.pop();
+  return popped;
+}
+SPLICE
+function addAnElementInGeneral(array, index, element) {
+  // add the element to the array at the index given
+  // (be sure not to replace any existing elements)
+  // return the array
+  array.splice(index, 0, element);
+  return array;
+}
+
+var resultArray1 = addAnElementInGeneral([7, 9, 10], 1, 8);
+console.log('should log [7, 8 , 9, 10]:', resultArray1);
+
+var resultArray2 = addAnElementInGeneral(['q', 'r', 't'], 2, 's');
+console.log('should log ["q", "r", "s", "t"]:', resultArray2);
+
+function applyConcat(array1, array2) {
+  // create a concattedArray variable
+  // assign it to the contents of both array1 and array2
+  // return the concattedArray variable
+  var concattedArray = array1.concat(array2);
+  return concattedArray;
+}

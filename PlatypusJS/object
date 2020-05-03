@@ -1,0 +1,143 @@
+// create an isObject variable
+// assign it to whether the input is an object type
+// create an isNotAnArray variable
+// assign it to whether the input is not an array
+// create an isObjectAndNotAnArray variable
+// assign it to a combination of isObject AND isNotAnArray
+// return the isObjectAndNotAnArray variable
+function isAnObject(input) {
+var isObject = typeof input === "object";
+var isNotAnArray = !Array.isArray(input);
+var isObjectAndNotAnArray = isObject && isNotAnArray;
+return isObjectAndNotAnArray;
+}
+
+NESTED OBJECT
+
+var user = {
+  "id": 3,
+  "name": "Clementine Bauch",
+  "username": "Samantha",
+  "email": "Nathan@yesenia.net",
+  "address": {
+    "street": "Douglas Extension",
+    "suite": "Suite 847",
+    "city": "McKenziehaven",
+    "zipcode": "59590-4157",
+    "geo": {
+      "lat": "-68.6102",
+      "lng": "-47.0653"
+    }
+  },
+  "phone": "1-463-555-4447",
+  "website": "ramiro.info",
+  "company": {
+    "name": "Romaguera-Jacobson",
+    "catchPhrase": "Face to face bifurcated interface",
+    "corporate_tagline": "e-enable strategic applications"
+  }
+};
+
+console.log(user['id']);
+console.log(user.name);
+console.log(user['username']);
+console.log(user.email);
+
+var addressObj = user['address'];
+console.log(addressObj.street);
+console.log(addressObj.suite);
+console.log(addressObj.city);
+console.log(addressObj.zipcode);
+
+var geoObj = addressObj['geo'];
+console.log(geoObj.lat);
+console.log(geoObj.lng);
+
+console.log(user.phone);
+console.log(user.website);
+
+var companyObj = user['company'];
+console.log(companyObj.name);
+console.log(companyObj.catchPhrase);
+console.log(companyObj.corporate_tagline);
+
+
+CONDITIONALS
+function isItUndefined(param) {
+  // if param is defined (or not undefined)
+  if (param !== undefined){
+    // return 'Input is defined'
+    return 'Input is defined';
+  }
+}
+
+function validLengthPassword(password) {
+  // if password length is greater than 4 and less than 15
+  if (password.length > 4 && password.length < 15){
+    // return 'Password length is valid'
+    return 'Password length is valid';
+  }
+}
+function findAgent(agentList, agentToSearchFor) {
+  // if agentToSearchFor is present within agentList
+  if (agentList.indexOf(agentToSearchFor) > -1){
+    // return '{agentToSearchFor} is present within Agent list'
+    return agentToSearchFor + ' is present within Agent list';
+  }
+}
+
+function generateReportSummary(reportTotals, teamName) {
+  // if teamName's report total is greater than 5
+  var teamTotal = reportTotals[teamName];
+  if (teamTotal > 5) {
+    // return '{teamName} has surpassed goal with {number_of_reports_for_team} reports'
+    return teamName + ' surpassed goal with' + teamTotal + ' reports';
+  }
+}
+function isItTruthy(param) {
+  // if param is truthy
+    // return 'Input is truthy'
+  // otherwise
+    // return 'Input is falsy'
+    if (param){
+      return 'Input is truthy';
+    } else {
+      return 'Input is falsy';
+    }
+}
+function passwordLongEnough(password) {
+  // if password length is greater than 8
+    // return 'Password is long enough'
+  // otherwise
+    // return 'Please enter a password of at least 9 characters'
+    if (password.length >= 8){
+      return 'Password is long enough';
+      } else {
+        return 'Please enter a password of at least 9 characters';
+      }
+}
+function findIngredient(ingredientList, ingredientToSearchFor) {
+  // if ingredientToSearchFor is present within ingredientList
+    // return '{ingredientToSearchFor} is on the list'
+  // otherwise
+    // return '{ingredientToSearchFor} is not on the list'
+    //(agentList.indexOf(agentToSearchFor) > -1){
+    if (ingredientList.indexOf(ingredientToSearchFor) > -1){
+      return ingredientToSearchFor + ' is on the list';
+      } else {
+        return ingredientToSearchFor + ' is not on the list';
+      }
+}
+function measureRequiredFruit(fruitTotals) {
+  // if there are more than 3 bananas and more than 10 strawberries
+    // return 'We have enough fruit, with {totalBananas} bananas, and {totalStrawberries} strawberries'
+  // otherwise
+    // return 'We do not have enough of both fruits'
+    var totalBananas = fruitTotals.bananas;
+    var totalStrawberries = fruitTotals.strawberries;
+    if (totalBananas > 3 && totalStrawberries > 10){
+      return 'We have enough fruit, with ' + totalBananas + ' bananas, and ' + totalStrawberries + ' strawberries';
+    } else {
+      return 'We do not have enough of both fruits';
+    }
+}

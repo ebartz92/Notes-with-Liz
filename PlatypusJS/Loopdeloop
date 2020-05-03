@@ -1,0 +1,104 @@
+// create an index variable
+// create a loop which iterates over the input array
+// log current array element to the console
+// increment value of index variable
+
+function loopAnArray(array) {
+    var index = 0;
+    while (index < array.length) {
+      console.log(array[index]);
+      index ++;
+    }
+}
+
+function loopAString(string) {
+  // create an index variable
+  // create a loop which iterates over the input string
+    // log current string character to the console
+    // increment value of index variable
+    var i = 0;
+    while (i < string.length) {
+      console.log(string[i]);
+      i++;
+    }
+}
+
+for (/*initialization*/ ; /*condition*/ ; /*final-expression*/ ) {
+  /* statement */
+}
+
+// create a loop which iterates from index to the end of the input array
+  // log current array element to the console
+function loopStartingAtIndex(array, index) {
+    for (var i = index; i < array.length; i++) {
+      console.log(array[i]);
+    }
+}
+function loopInReverse(array) {
+  // create a loop which iterates from back to front of the input array
+    // log current array element to the console
+    for (var i = array.length -1; i > -1; i--) {
+      console.log(array[i]);
+    }
+}
+
+continue
+function useContinue(array, index) {
+  for (var i = 0; i < array.length; i++) {
+  if (i === index) {
+  continue;
+  }
+  console.log (array[i]);
+  }
+}
+
+Break
+function useBreak(array, index) {
+    for (var i = 0; i < array.length; i++) {
+      if (i > index) {
+        break;
+      }
+      console.log(array[i]);
+    }
+}
+for in
+function loopOverValues(object) {
+  // create a loop which iterates over the input object
+    // log current value to the console
+    for (var key in object) {
+      var currentValue = object[key];
+      console.log(currentValue);
+    }
+}
+// create a loop which iterates over the input array
+  // create an inner loop which iterates over current inner array
+    // log current element to the console
+
+function loopAnArrayOfArrays(arrayOfArrays) {
+  for (var i = 0; i < arrayOfArrays.length; i++) {
+    for (var j = 0; j < arrayOfArrays[i].length; j++ ) {
+      console.log(arrayOfArrays[i][j]);
+      }
+    }
+}
+
+function loopAnObjectOfObjects(nestedObject) {
+  // create a loop which iterates over the input object
+    // create an inner loop which iterates over current inner object
+      // log current value to the console
+  for (var key in nestedObject) {
+    for (var innerKey in nestedObject[key]) {
+    console.log(nestedObject[key][innerKey]);
+    }
+  }
+}
+function generateCombinations(array1, array2) {
+  // create a loop which iterates over the first array
+    // create an inner loop which iterates over the second array
+      // log current element of first array and current element of second array to the console with space in between
+  for (var i = 0; i < array1.length; i++) {
+    for (var j = 0; j < array2.length; j++) {
+      console.log(array1[i] + ' ' + array2[j]);
+    }
+  }
+}

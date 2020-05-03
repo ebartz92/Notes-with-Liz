@@ -1,0 +1,34 @@
+// notes with Liz
+
+
+// old way of making a class
+// constructor VVVVVVV
+// function Cat(name, age, color) {
+//   this.name = name;
+//   this.age = age;
+//   this.color = color;
+// }
+
+// Modern way of making a Cat class
+// must have a method constructor that builds an instance of a class
+class Cat {
+  constructor(n, a, c) {
+    this.name = n; // properties || instance variables
+    this.ageInCatYears = a; // left side has an instance variable called catAge and assinging it to the input parameter age
+    this.colors = c;
+  }
+
+  whatsMyAgeIn() {
+    if (this.colors[0] === "Black") {
+      return this.catAge * 5;
+    } else if (this.colors === "green") {
+      return this.catAge * 7;
+    } else {
+      return this.catAge;
+    }
+
+  }
+}  //  this is the end
+
+
+Also Array.isArray() is what’s called a “class method” instead of an “instance method” it’s probably going to confuse talking about it in depth at the moment

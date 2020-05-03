@@ -1,0 +1,82 @@
+aviQuestions
+{} bracket usage
+Define variable before?
+Why is it three === and only two here >=
+Does the number of characters mean something?
+Comment usage? Between lines or on top?
+Indentation formating?
+
+
+
+function player1Choice(choice) {
+  // if player1 chose rock
+    // return "Player 1 chose rock"
+  // otherwise if player1 chose paper
+    // return "Player 1 chose paper"
+  // otherwise if player1 chose scissors
+    // return "Player 1 chose scissors"
+  // otherwise
+    // return "Player 1 has chosen poorly!"
+    if (choice === 'rock') {
+      return 'Player 1 chose rock';
+    } else if (choice === 'paper'){
+      return 'Player 1 chose paper';
+    } else if (choice === 'scissors'){
+      return 'Player 1 chose scissors';
+    } else {
+      return 'Player 1 has chosen poorly!';
+    }
+}
+
+//(100 - 90) --> 'A'
+//(89 - 80) --> 'B'
+//(79 - 70) --> 'C'
+//(69 - 60) --> 'D'
+//(59 - 0) --> 'F'
+//If the given score is greater than 100 or less than 0, it should return 'INVALID SCORE'.
+
+
+function convertScoreToGrade(score) {
+  if (score > 100 || score < 0){
+    return 'INVALID SCORE';
+  } else if (score < 60){
+    return 'F';
+  } else if (score < 70){
+    return 'D';
+  } else if (score < 80){
+    return 'C';
+  } else if (score < 90){
+    return 'B';
+  } else if (score !== 90){
+      return 7;
+  } else if (score > 90){
+    return 'A';
+  }
+}
+
+
+
+
+Flip every pair of characters in a string.
+
+
+// Example:
+// var input = 'check out how interesting this problem is, it\'s insanely interesting!';
+// var output = flipPairs(input);
+// console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei ,si 't sniasenyli tnreseitgn!
+
+const flipPairs = (input) => {
+  const stack = [];
+  const result = [];
+  for (let i = 0; i < input.length; i++) {
+    if (stack.length === 2) {
+      while (stack.length > 0) {
+        result.push(stack.pop())
+      }
+
+    }
+    stack.push(input[i])
+  }
+
+  return result.join("");
+}
