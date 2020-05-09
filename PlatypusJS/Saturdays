@@ -1,3 +1,5 @@
+Accumulator Pattern
+
 // definition
 function nameOfFunction(/*list of parameters*/) {
   /*statements that define the function*/
@@ -8,3 +10,29 @@ var result = nameOfFunction(/*list of arguments*/);
 console.log(result);
 
 
+function filterEvenElements(numbers) {
+  // if input in empty, what do we return? (edge case)
+  if (numbers.length === 0) {
+    return [];
+  }
+  // output is new array of even numbers
+}
+
+
+function filterEvenElements(numbers) {
+  if (numbers.length === 0) {
+    return [];
+  }
+
+  var evenNumbers = [];
+
+  for (var i = 0; i < numbers.length; i++) {
+    // check if current number is even
+    if (numbers[i] % 2 === 0) {
+      // add to evenNumbers array
+      evenNumbers.push(numbers[i]);
+    }
+  }
+
+  return evenNumbers;
+}
