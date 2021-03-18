@@ -1,2 +1,2 @@
-# Notes-with-Liz
+# Script.js
 Notes 
